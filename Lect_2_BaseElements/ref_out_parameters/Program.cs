@@ -70,7 +70,18 @@ namespace ref_out_parameters
                 Console.Write($"{e} ");
             Console.WriteLine();
 
+            // Именувани аргументи
+            DisplayGreeting(lastName: "Donchev", firstName: "Ivaylo");
+
             Console.ReadKey();
         }
+        public static void DisplayGreeting(
+            string firstName,
+            string middleName = default,
+            string lastName = default)
+        {
+            Console.WriteLine($"Hello, {firstName} {middleName} {lastName}!");
+        }
+
     }
 }
