@@ -8,7 +8,7 @@ namespace Lect_2_BaseElements
 {
     class Program
     {
-        static int MaxValue(int[] intArray)
+        static int MaxValue(params int[] intArray)
         {
             int max = intArray[0];
             for(int i=1; i<intArray.Length; i++)
@@ -25,6 +25,8 @@ namespace Lect_2_BaseElements
             Console.WriteLine($"The maximum value in myArray is {maxVal}");
             Console.WriteLine($"{MaxValue(new int[] { 1, 8, 3, 6, 2, 5, 9, 3, 0, 2 })}");
 
+            maxVal = MaxValue(1, 8, 3, 6, 2, 5, 9, 3, 0, 2);
+            Console.WriteLine($"The maximum value in parameters is {maxVal}");
 
             List<int> myList = new List<int> { 1, 8, 3, 6, 2, 5, 9, 3, 0, 2 };
             maxVal = MaxValue(myList);
