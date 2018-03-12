@@ -26,10 +26,10 @@ namespace Lecture_4_Properties
             fields[0].SetValue(rop, 10);
             fields[1].SetValue(rop, 20);
             Console.WriteLine($"({rop.X},{rop.Y})");
-
             // rop deconstruction
             var (xx, yy) = rop;
             Console.WriteLine($"xx = {xx}, yy = {yy}");
+
             Console.ReadKey();
         }
     }
