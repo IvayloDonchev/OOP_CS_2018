@@ -10,6 +10,7 @@ namespace Demo_Lect_4
     {
         static int circlesCount;
         private int radius;
+        public int Diameter => radius * 2; //read-only property
         static Circle()  // статичен конструктор на инстантен клас
         {
             circlesCount = 0;
@@ -25,10 +26,7 @@ namespace Demo_Lect_4
             circlesCount--;
             Console.WriteLine($"Circle with radius {this.radius} destruction...");
         }
-        public double Area()
-        {
-            return Math.PI * radius * radius;
-        }
+        public double Area => Math.PI * radius * radius;
         public void SetRadius(int radius)
         {
             if (radius > 0)
