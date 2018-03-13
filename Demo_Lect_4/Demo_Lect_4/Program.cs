@@ -8,14 +8,19 @@ namespace Demo_Lect_4
 {
     class Program
     {
+        public static void Foo(ref double d)
+        {
+            d *= 2;
+        }
         static void Main(string[] args)
         {
+
             ReadOnlyPoint rop = new ReadOnlyPoint(1, 2);
             Console.WriteLine($"({rop.X},{rop.Y})");
             var fields = typeof(ReadOnlyPoint).GetFields(
                 System.Reflection.BindingFlags.NonPublic |
                 System.Reflection.BindingFlags.Instance);
-            foreach(var field in fields)
+            foreach (var field in fields)
                 Console.WriteLine(field.Name);
             fields[0].SetValue(rop, 10);
             fields[1].SetValue(rop, 20);
