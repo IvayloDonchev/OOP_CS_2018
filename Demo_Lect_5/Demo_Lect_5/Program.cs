@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace Demo_Lect_5
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
+            Circle c = new Circle(10);
+            Console.WriteLine(c);
         }
     }
 }

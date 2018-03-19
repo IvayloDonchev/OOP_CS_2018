@@ -23,7 +23,7 @@ namespace Demo_Lect_5
             else
                 throw new ArgumentOutOfRangeException("Incorrect radius value");
         }
-        public override string ToString() => $"Circle with radius {this.radius} and area {this.Area}";
+        public override string ToString() => $"Circle with radius {this.radius} and area {Math.Round(this.Area,2)}";
         public static Circle CreateCircle() => new Circle();
     }
 }
