@@ -8,21 +8,25 @@ namespace Demo_Lect_4
 {
     public class Point
     {
-        private double x, y;
+        public double X { get; set; }
+        public double Y { get; set; }
         public Point(double x, double y)
         {
-            this.x = x;
-            this.y = y;
+            this.X = x;
+            this.Y = y;
         }
         public Point() : this(0.0, 0.0) { }
         public void SetPoint(double x, double y)
         {
-            this.x = x;
-            this.y = y;
+            this.X = x;
+            this.Y = y;
         }
-        public override string ToString() => $"({x},{y})";
-        public double DistanceTo(Point p) => Math.Sqrt(Math.Pow(x - p.x, 2) + Math.Pow(y - p.y, 2));
-        public double X => x;   //read-only property
-        public double Y => y;
+        public override string ToString() => $"({X},{Y})";
+        public double DistanceTo(Point p) => Math.Sqrt(Math.Pow(X - p.X, 2) + Math.Pow(Y - p.Y, 2));
+        public Point Clone() => new Point(this.X, this.Y);
+        public void Deconstruct(out double a, out double b)
+        {
+            a = X; b = Y;
+        }
     }
 }

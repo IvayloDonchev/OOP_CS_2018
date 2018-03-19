@@ -14,17 +14,37 @@ namespace Demo_Lect_4
         }
         static void Main(string[] args)
         {
+            Point A = new Point();
+            Point B = new Point(5, 10);
+            Console.WriteLine($"Point A: {A}");
+            Console.WriteLine($"Point B: {B}");
 
-            ReadOnlyPoint rop = new ReadOnlyPoint(1, 2);
-            Console.WriteLine($"({rop.X},{rop.Y})");
-            var fields = typeof(ReadOnlyPoint).GetFields(
-                System.Reflection.BindingFlags.NonPublic |
-                System.Reflection.BindingFlags.Instance);
-            foreach (var field in fields)
-                Console.WriteLine(field.Name);
-            fields[0].SetValue(rop, 10);
-            fields[1].SetValue(rop, 20);
-            Console.WriteLine($"({rop.X},{rop.Y})");
+            Line L = new Line(A, B);
+            Console.WriteLine(L);
+            Console.WriteLine($"Length: {L.Length}");
+
+            A.SetPoint(1, 1);
+            Console.WriteLine(L); //полетата на линията не са променени
+
+            Line LL = new Line(1, 2, 3, 4);
+            Console.WriteLine(LL);
+
+            Point C = B.Clone();
+            B.X = 100; B.Y = 200;
+            Console.WriteLine($"B: {B}, C: {C}");
+            (double xx, double yy) = B; //deconstruction to tuple
+            Console.WriteLine($"xx = {xx}, yy = {yy}");
+
+            //ReadOnlyPoint rop = new ReadOnlyPoint(1, 2);
+            //Console.WriteLine($"({rop.X},{rop.Y})");
+            //var fields = typeof(ReadOnlyPoint).GetFields(
+            //    System.Reflection.BindingFlags.NonPublic |
+            //    System.Reflection.BindingFlags.Instance);
+            //foreach (var field in fields)
+            //    Console.WriteLine(field.Name);
+            //fields[0].SetValue(rop, 10);
+            //fields[1].SetValue(rop, 20);
+            //Console.WriteLine($"({rop.X},{rop.Y})");
 
 
 
