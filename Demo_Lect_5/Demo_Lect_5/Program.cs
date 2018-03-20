@@ -10,6 +10,8 @@ namespace Demo_Lect_5
     {
         static void Main(string[] args)
         {
+            Circle c = new Circle(5);
+            Console.WriteLine(c);
         }
     }
 }
