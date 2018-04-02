@@ -10,6 +10,9 @@ namespace Demo_Lect_7
     {
         static void Main(string[] args)
         {
+            Time t1 = new Time { hours=8, minutes=15, seconds=0};
+            Console.WriteLine(t1);
+            Console.WriteLine();
             Cow cow = new Cow();
             cow.EatFood();
             cow.Breed();
