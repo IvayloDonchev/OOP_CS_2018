@@ -15,6 +15,7 @@ namespace Demo_Lect_5
         {
             this.SetRadius(radius);
         }
+        public Circle(Circle other) => this.radius = other.radius;
         public double Area => Math.PI * radius * radius;
         public void SetRadius(int radius)
         {
@@ -23,7 +24,8 @@ namespace Demo_Lect_5
             else
                 throw new ArgumentOutOfRangeException("Incorrect radius value");
         }
-        public override string ToString() => $"Circle with radius {this.radius} and area {Math.Round(this.Area,2)}";
+        public override string ToString() => $"Circle with radius {this.radius} and area {Math.Round(this.Area,3)}";
         public static Circle CreateCircle() => new Circle();
+        public Circle Clone() => new Circle(this.radius);
     }
 }
