@@ -13,7 +13,7 @@ namespace Demo_Lect_7
             string type_name = this.GetType().Name;
             Console.WriteLine($"{type_name} eats food");
         }
-        public void Breed()
+        public void Breathe()
         {
             string type_name = this.GetType().Name;
             Console.WriteLine($"{type_name} breed");

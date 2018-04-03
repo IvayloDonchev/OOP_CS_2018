@@ -49,7 +49,8 @@ namespace Demo_Lect_5
                 Console.WriteLine("i is null");
             else
                 Console.WriteLine($"i = {i}");
-
+            i = null;
+            Console.WriteLine(i.ToString() ?? "i is null");
 
 
 

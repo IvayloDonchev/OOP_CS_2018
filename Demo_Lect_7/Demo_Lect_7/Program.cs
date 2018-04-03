@@ -13,29 +13,30 @@ namespace Demo_Lect_7
             Time t1 = new Time { hours=8, minutes=15, seconds=0};
             Console.WriteLine(t1);
             Console.WriteLine();
+
             Cow cow = new Cow();
             cow.EatFood();
-            cow.Breed();
+            cow.Breathe();
             cow.Moo();
             cow.SupplyMilk();
             Console.WriteLine();
 
             Chicken chicken = new Chicken();
             chicken.EatFood();
-            chicken.Breed();
+            chicken.Breathe();
             chicken.Cluck();
             chicken.LayEgg();
             Console.WriteLine();
 
             Animal animal = new Cow();  //OK, Cow is Animal
             animal.EatFood();   //OK
-            animal.Breed();     //OK
+            animal.Breathe();     //OK
             //animal.Moo();       //Error!
             Console.WriteLine();
 
             animal = new Chicken();     //OK, Chicken is Animal
             animal.EatFood();
-            animal.Breed();
+            animal.Breathe();
 
             Console.ReadKey();
         }
