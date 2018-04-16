@@ -50,27 +50,29 @@ namespace Demo_Lect_7
 
             //System.Int32 i;
 
-            Horse myHorse = new Horse("Brambie");
-            //Whale myWhale = myHorse;  //Error
-            Mammal myMammal = myHorse;  //OK
-            object obj = myHorse;
-     
+            Horse myHorse = new Horse("Napoleon");
+            Mammal myMammal = myHorse;
+            Horse myHorseAgain = myMammal as Horse;
+            myHorseAgain?.Trot();   //OK
+            Whale myWhale = new Whale("Abalone");
+            myMammal = myWhale;
+            myHorseAgain = myMammal as Horse;
+            myHorseAgain?.Trot();   //null
 
 
-
-            var horseMethods = typeof(Horse).GetMethods(
-                System.Reflection.BindingFlags.Public |
-                System.Reflection.BindingFlags.Instance);
-            foreach(var method in horseMethods)
-            {
-                var parameters = method.GetParameters();
-                Console.Write($"{method.ReturnType.Name} {method.Name}(");
-                foreach(var parameter in parameters)
-                {
-                    Console.Write($"{parameter.ParameterType.Name} {parameter.Name} ");
-                }
-                Console.WriteLine(")");
-            }
+            //var horseMethods = typeof(Horse).GetMethods(
+            //    System.Reflection.BindingFlags.Public |
+            //    System.Reflection.BindingFlags.Instance);
+            //foreach(var method in horseMethods)
+            //{
+            //    var parameters = method.GetParameters();
+            //    Console.Write($"{method.ReturnType.Name} {method.Name}(");
+            //    foreach(var parameter in parameters)
+            //    {
+            //        Console.Write($"{parameter.ParameterType.Name} {parameter.Name} ");
+            //    }
+            //    Console.WriteLine(")");
+            //}
 
 
             Console.ReadKey();

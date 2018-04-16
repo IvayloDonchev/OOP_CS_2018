@@ -12,7 +12,9 @@ namespace Demo_Lect_7
         { }
         public void Trot()
         {
-            //-----------------------------
+            Console.WriteLine("Trot...");
         }
+        
+
     }
 }
