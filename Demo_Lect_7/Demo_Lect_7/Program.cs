@@ -50,14 +50,14 @@ namespace Demo_Lect_7
 
             //System.Int32 i;
 
-            Horse myHorse = new Horse("Napoleon");
-            Mammal myMammal = myHorse;
-            Horse myHorseAgain = myMammal as Horse;
-            myHorseAgain?.Trot();   //OK
-            Whale myWhale = new Whale("Abalone");
-            myMammal = myWhale;
-            myHorseAgain = myMammal as Horse;
-            myHorseAgain?.Trot();   //null
+            //Horse myHorse = new Horse("Napoleon");
+            //Mammal myMammal = myHorse;
+            //Horse myHorseAgain = myMammal as Horse;
+            //myHorseAgain?.Trot();   //OK
+            //Whale myWhale = new Whale("Abalone");
+            //myMammal = myWhale;
+            //myHorseAgain = myMammal as Horse;
+            //myHorseAgain?.Trot();   //null
 
 
             //var horseMethods = typeof(Horse).GetMethods(
