@@ -14,5 +14,7 @@ namespace Demo_Lect_7
         {
             //--------------------------
         }
+        public new string GetTypeName() => "This is a whale";
+        
     }
 }
