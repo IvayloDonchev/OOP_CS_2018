@@ -84,20 +84,32 @@ namespace Demo_Lect_7
             //Horse myHorse = new Horse("Ivan");
             //Console.WriteLine(myHorse);
 
-            Mammal myMammal;
+            //Mammal myMammal;
+            //Horse myHorse = new Horse("Napoleon");
+            //Whale myWhale = new Whale("Abalone");
+            //Aardvark myAardvark = new Aardvark("Ivan");
+            //myMammal = myHorse;
+            //Console.WriteLine(myMammal.GetTypeName());  //This is a horse
+            //myMammal = myWhale;
+            //Console.WriteLine(myMammal.GetTypeName());  //This is a whale
+            //myMammal = myAardvark;
+            //Console.WriteLine(myMammal.GetTypeName());  //This is a mammal
+
+
             Horse myHorse = new Horse("Napoleon");
-            Whale myWhale = new Whale("Abalone");
-            Aardvark myAardvark = new Aardvark("Ivan");
-            myMammal = myHorse;
-            Console.WriteLine(myMammal.GetTypeName());  //This is a horse
-            myMammal = myWhale;
-            Console.WriteLine(myMammal.GetTypeName());  //This is a whale
-            myMammal = myAardvark;
-            Console.WriteLine(myMammal.GetTypeName());  //This is a mammal
+            ILandBound iMyHorse = myHorse;
+            ILandBound iNewHorse = new Horse("Pesho");
+            Console.WriteLine(iMyHorse.NumberOfLegs());
 
+            Horse horseRef = null;
+            if(iMyHorse is Horse)
+            {
+                horseRef = iMyHorse as Horse;
+                Console.WriteLine(horseRef);
+            }
 
-
-
+            Console.WriteLine((myHorse as IJourney).NumberOfLegs());
+            Console.WriteLine((myHorse as ILandBound).NumberOfLegs());
             Console.ReadKey();
         }
     }
