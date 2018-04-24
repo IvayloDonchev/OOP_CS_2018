@@ -32,6 +32,7 @@ namespace Demo_Lect_9
             v = myPlane;
             v.Drive();
 
+            Console.WriteLine("\nPress any key...");
             Console.ReadKey();
         }
 
