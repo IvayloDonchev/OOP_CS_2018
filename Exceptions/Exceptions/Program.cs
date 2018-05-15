@@ -10,7 +10,7 @@ namespace Exceptions
     {
         static string[] eTypes = { "none", "simple", "index", "nested index", "filter" };
         static void Main(string[] args)
-        {
+        { 
             foreach(string eType in eTypes)
             {
                 try
