@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4D433C7B-EF29-4FE3-AC0C-BFF452E78FE2}</ProjectGuid>
+    <ProjectGuid>{902EAD25-ED44-4638-A6C2-4FAECBCB6CCE}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Demo_Lect_7</RootNamespace>
-    <AssemblyName>Demo_Lect_7</AssemblyName>
+    <RootNamespace>MySortedCollection</RootNamespace>
+    <AssemblyName>MySortedCollection</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -21,7 +21,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -43,23 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Aardvark.cs" />
-    <Compile Include="Animal.cs" />
-    <Compile Include="Chicken.cs" />
-    <Compile Include="Cow.cs" />
-    <Compile Include="Horse.cs" />
-    <Compile Include="IGrazable.cs" />
-    <Compile Include="IJourney.cs" />
-    <Compile Include="ILandBound.cs" />
-    <Compile Include="Mammal.cs" />
+    <Compile Include="Man.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Time.cs" />
-    <Compile Include="Whale.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

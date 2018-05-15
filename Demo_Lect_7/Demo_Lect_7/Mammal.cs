@@ -21,6 +21,11 @@ namespace Demo_Lect_7
         {
             //---------------------
         }
-        
+        public void Move()
+        {
+            Console.WriteLine("Mammal moves");
+        }
+        public override string ToString() => name;
+        public virtual string GetTypeName() => "This is a mammal";
     }
 }

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4D433C7B-EF29-4FE3-AC0C-BFF452E78FE2}</ProjectGuid>
+    <ProjectGuid>{E9805F57-BA7C-4ECE-A320-A5C538B745D9}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Demo_Lect_7</RootNamespace>
-    <AssemblyName>Demo_Lect_7</AssemblyName>
+    <RootNamespace>Demo_Lect_9</RootNamespace>
+    <AssemblyName>Demo_Lect_9</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,23 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Aardvark.cs" />
-    <Compile Include="Animal.cs" />
-    <Compile Include="Chicken.cs" />
-    <Compile Include="Cow.cs" />
-    <Compile Include="Horse.cs" />
-    <Compile Include="IGrazable.cs" />
-    <Compile Include="IJourney.cs" />
-    <Compile Include="ILandBound.cs" />
-    <Compile Include="Mammal.cs" />
+    <Compile Include="Airplane.cs" />
+    <Compile Include="Car.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Time.cs" />
-    <Compile Include="Whale.cs" />
+    <Compile Include="Vehicle.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
