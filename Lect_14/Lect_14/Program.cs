@@ -63,7 +63,7 @@ namespace Lect_14
             stringCollection[0] = "Hello World!";
             Console.WriteLine(stringCollection[0]);
             foreach(var x in stringCollection)
-                Console.WriteLine(x);
+                if(x != null) Console.WriteLine(x);
             Console.ReadKey();
         }
     }

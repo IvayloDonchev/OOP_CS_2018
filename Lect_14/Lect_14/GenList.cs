@@ -16,7 +16,7 @@ namespace Lect_14
             public Node next;
             public Node()
             {
-                key = default(T);
+                key = default;
                 next = null;
             }
             public Node(T x)
