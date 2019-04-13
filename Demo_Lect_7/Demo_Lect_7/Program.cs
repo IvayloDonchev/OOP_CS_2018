@@ -30,23 +30,27 @@ namespace Demo_Lect_7
             //cow.SupplyMilk();
             //Console.WriteLine();
 
-            //Chicken chicken = new Chicken();
-            //chicken.EatFood();
-            //chicken.Breathe();
-            //chicken.Cluck();
-            //chicken.LayEgg();
-            //Console.WriteLine();
+            Chicken chicken = new Chicken();
+            chicken.EatFood();
+            chicken.Breathe();
+            chicken.Cluck();
+            chicken.LayEgg();
+            Console.WriteLine();
 
-            //Animal animal = new Cow();  //OK, Cow is Animal
-            //animal.EatFood();   //OK
-            //animal.Breathe();     //OK
-            ////animal.Moo();       //Error!
-            //Console.WriteLine();
+            Animal animal = new Cow();  //OK, Cow is Animal
+            animal.EatFood();   //OK
+            animal.Breathe();     //OK
+            //animal.Moo();       //Error!
+            Console.WriteLine();
 
-            //animal = new Chicken();     //OK, Chicken is Animal
-            //animal.EatFood();
-            //animal.Breathe();
+            animal = new Chicken();     //OK, Chicken is Animal
+            animal.EatFood();
+            animal.Breathe();
 
+            if (animal is Chicken)
+                (animal as Chicken).Cluck();
+
+            ((Chicken)animal).Cluck();
 
             //System.Int32 i;
 
@@ -96,20 +100,20 @@ namespace Demo_Lect_7
             //Console.WriteLine(myMammal.GetTypeName());  //This is a mammal
 
 
-            Horse myHorse = new Horse("Napoleon");
-            ILandBound iMyHorse = myHorse;
-            ILandBound iNewHorse = new Horse("Pesho");
-            Console.WriteLine(iMyHorse.NumberOfLegs());
+            //Horse myHorse = new Horse("Napoleon");
+            //ILandBound iMyHorse = myHorse;
+            //ILandBound iNewHorse = new Horse("Pesho");
+            //Console.WriteLine(iMyHorse.NumberOfLegs());
 
-            Horse horseRef = null;
-            if(iMyHorse is Horse)
-            {
-                horseRef = iMyHorse as Horse;
-                Console.WriteLine(horseRef);
-            }
+            //Horse horseRef = null;
+            //if(iMyHorse is Horse)
+            //{
+            //    horseRef = iMyHorse as Horse;
+            //    Console.WriteLine(horseRef);
+            //}
 
-            Console.WriteLine((myHorse as IJourney).NumberOfLegs());
-            Console.WriteLine((myHorse as ILandBound).NumberOfLegs());
+            //Console.WriteLine((myHorse as IJourney).NumberOfLegs());
+            //Console.WriteLine((myHorse as ILandBound).NumberOfLegs());
             Console.ReadKey();
         }
     }
