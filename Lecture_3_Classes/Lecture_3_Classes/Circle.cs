@@ -9,7 +9,7 @@ namespace Lecture_3_Classes
     public class Circle
     {
         public Circle(int r) => radius = r;
-        public Circle() : this(0) {}
+        public Circle() : this(1) {}
         private int radius;
         public void SetRadius(int r)
         {
